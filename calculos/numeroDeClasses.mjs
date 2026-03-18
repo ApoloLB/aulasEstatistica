@@ -18,7 +18,7 @@ const qntLivros = [
     30, 33, 23, 31, 33, 28, 39, 38, 22, 37
   ];//são 40 idades
 
-  function numClasses(valores) {
+  export function numClasses(valores) {
 
     let numDeClasses = 10;
     let salto = valores.length / numDeClasses;
@@ -33,10 +33,27 @@ const qntLivros = [
 
             console.log('Classe: ', nmClasse, 'Limite Inferior: ', limiteInferior, 'Limite Superior: ', limiteSuperior);
         }
+
+        return 10;
+  }
+
+  //Aqui criei a mesma função só que para poder exportala em outras funções sem o console .log
+  export function numClassesCalculo(valores) {
+    let numDeClasses = 10;
+    let salto = valores.length / numDeClasses;
+    
+    const ordenado = valores.sort((a, b) => a - b); //utilizei o sort dessa forma para que ordene os valores do menor para o maior
+        for(let i = 0; i < ordenado.length; i+= salto) {
+            let classe = ordenado.slice(i, i + salto);
+    
+            const limiteSuperior = classe[classe.length - 1]; //criei esses dois limites para não ficar  um array completo tipo [1, 2, 3, 4] e sim [1 - 4]
+            const limiteInferior = classe[0];
+            const nmClasse = (i / salto) + 1; // precisei dividir por salto para dar 1
+        }
+    
+        return 10;
   }
 
   
-  numClasses(idades);
-  console.log(" ");
-  numClasses(qntLivros);
+  
 

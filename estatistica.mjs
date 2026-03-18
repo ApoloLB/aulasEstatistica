@@ -1,4 +1,6 @@
-//para realizar o calculo precrisei declarar os array como let para poder ser alterado
+import { amplitudeTotal } from './calculos/amplitudeTotal.mjs';
+import { numClasses } from './calculos/numeroDeClasses.mjs';
+import { amplitudeDasClasses } from './calculos/amplitudeDasClasses.mjs';
 
 const qntLivros = [
     2520, 3200, 1900, 4100, 4600, 3400, 3680, 3720, 3600, 3300,
@@ -20,16 +22,23 @@ const qntLivros = [
     30, 33, 23, 31, 33, 28, 39, 38, 22, 37
   ];
 
-  //nessa função que criei eu declaro duas variaveis para armazenar o maior e o menor valor da lista, e depois eu subtrai o maior pelo menor, retornando a amplitude total
-  function amplitudeTotal(valores) {
-   const maior = Math.max(...valores);
-   const menor = Math.min(...valores);
 
-   const amplitudeTotal = maior - menor;
 
-   return amplitudeTotal
+//POR FAVOR COMENTAR OU DECOMENTAR OS CODIGOS PARA RODAR APENAS O QUE DESEJAR, PARA COMENTAR É SÓ COLOCAR "//"
 
-  }
+//AMPLITUDE TOTAL:
+  //console.log("Amplitude total: ",amplitudeTotal(qntLivros));console.log("Amplitude total: ",amplitudeTotal(idades));
+  
 
-console.log("Amplitude total da quantidade de Livros: ",amplitudeTotal(qntLivros));
-console.log("Amplitude total das idades: ",amplitudeTotal(idades));
+//NUMERO DE CLASSES:
+  //console.log("Numero de classes: ",numClasses(qntLivros));console.log("Numero de classes: ",numClasses(idades));
+  
+
+//AMPLITUDE DAS CLASSES:
+
+  //console.log("Amplitude das classes LIVROS: ", amplitudeDasClasses(qntLivros)); console.log('Amplitude das classes IDADES: ', amplitudeDasClasses(idades));
+
+//LIMITES DAS CLASSIS
+
+
+  
